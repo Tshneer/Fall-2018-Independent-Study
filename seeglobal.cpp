@@ -1,4 +1,4 @@
-
+// This is used for no noise. 
 // All information and variables names are based on those in Doi 10.1038/ncomms7664
 //Emergent long-range synchronization of oscillating
 //ecological populations without external forcing
