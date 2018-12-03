@@ -97,7 +97,7 @@ void neighbor(void) {   //two dimensional neighbor ... interesting note to remem
 	//}
 //}
 
-long int const test = 100; //Total number of interations for each local noise strengh
+long int const test = 1000; //Total number of interations for each local noise strengh
 long int const burn = 0; //No data collected over the first burn# of steps
 //int scope;
 //long int to avoid overflow 
@@ -127,7 +127,9 @@ int main() {
 		distribution.reset(); //Is this a bottleneck?
 		std::uniform_real_distribution<double> distribution(0.0, 1.0);
 		lattice[i] = distribution(generator);
-		
+		//if (i>2048 & i< 2112) {
+			//lattice[i] = 0.5;
+		//}
 	}
 	
 
