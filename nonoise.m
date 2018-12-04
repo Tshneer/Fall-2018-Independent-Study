@@ -14,9 +14,9 @@ test=notes(2);
 time=notes(3);
 
 len=notes(4);
+df=notes(5);
 
-
-
+disp(['df is ',num2str(df)])
 disp(['burn is ',num2str(burn)])
 disp(['test is ',num2str(test)])
 disp(['side is ',num2str(len)])
@@ -31,20 +31,21 @@ end
 over=0;
 figure(1)
 for b=1:numel(lattice_store)/len^2
-   if mod(b,2)==0
+   if mod(b,2)==0 || b==1
    pcolor(time_series(:,:,b))
+   colorbar
    end
    xlim([0 len])
    ylim([0 len])
    zlim([0 1])
-    pause(0.3)
-    if mod(b,50)==0
-        prompt = '1 or 2?';
-    over = input(prompt);
-    end
-    if over==1
-        break
-    end
+    pause(1)
+   % if mod(b,50)==0
+    %    prompt = '1 or 2?';
+    %over = input(prompt);
+   % end
+    %if over==1
+     %   break
+    %end
 end
 
 figure(2)
